@@ -194,7 +194,7 @@
     }
     .lang option{color:#000;}
 
-    /* Google Play badge button */
+    /* Google Play badge button (official look) */
     .gp-badge{
       display:inline-flex;
       align-items:center;
@@ -212,21 +212,29 @@
     }
     .gp-badge img{
       display:block;
-      height: 44px; /* standard-ish */
+      height: 48px; /* slightly bigger = more premium */
       width: auto;
     }
 
     /* Hero */
-    .hero{padding: 4.3rem 0 2.7rem;}
+    .hero{padding: 4.0rem 0 2.2rem;}
     .heroGrid{
       display:grid;
       grid-template-columns: 1.15fr .85fr;
       gap: 2.1rem;
-      align-items:center;
+      align-items:start;
     }
+
+    /* Make the preview appear in the right column on desktop,
+       but naturally below the download badge on mobile. */
+    .heroCopy{grid-column:1; grid-row:1;}
+    .heroCard{grid-column:2; grid-row:1;}
+
     @media (max-width: 900px){
-      .heroGrid{grid-template-columns:1fr; gap:1.6rem;}
-      .brand{min-width:auto}
+      .heroGrid{grid-template-columns:1fr; gap:1.2rem;}
+      .heroCopy{grid-column:1; grid-row:auto;}
+      .heroCard{grid-column:1; grid-row:auto;}
+      .navlinks{display:none;}
     }
 
     .kicker{
@@ -251,7 +259,7 @@
 
     h1{
       margin:.85rem 0 .8rem;
-      font-size: clamp(2.15rem, 3.6vw, 3.15rem);
+      font-size: clamp(2.05rem, 3.5vw, 3.15rem);
       line-height:1.08;
       letter-spacing:-.02em;
       font-weight: 950;
@@ -266,7 +274,7 @@
       color: var(--muted);
       font-size: 1.08rem;
       max-width: 60ch;
-      margin: 0 0 1.25rem;
+      margin: 0 0 1.05rem;
     }
 
     .heroActions{
@@ -274,33 +282,10 @@
       gap:.75rem;
       flex-wrap:wrap;
       align-items:center;
-      margin-top: 1.2rem;
+      margin-top: .95rem;
     }
 
-    .btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      gap:.5rem;
-      padding:.85rem 1.05rem;
-      border-radius: 14px;
-      font-weight:900;
-      letter-spacing:.02em;
-      text-decoration:none;
-      border:1px solid rgba(233,247,255,.16);
-      background: rgba(255,255,255,.04);
-      color:var(--text);
-      box-shadow: 0 14px 32px rgba(0,0,0,.35);
-      transition: transform .12s ease, border-color .12s ease, background .12s ease;
-      white-space:nowrap;
-    }
-    .btn:hover{
-      transform: translateY(-1px);
-      border-color: rgba(233,247,255,.28);
-      background: rgba(255,255,255,.06);
-    }
-
-    /* Right card */
+    /* Preview card */
     .heroCard{
       border-radius: var(--radius2);
       background: linear-gradient(180deg, rgba(17,19,26,.78), rgba(17,19,26,.55));
@@ -353,7 +338,7 @@
     }
 
     /* Sections */
-    section{padding: 2.4rem 0;}
+    section{padding: 2.15rem 0;}
     .sectionCard{
       border-radius: var(--radius2);
       border:1px solid rgba(233,247,255,.12);
@@ -369,10 +354,7 @@
     li b{color: var(--text);}
 
     .grid2{display:grid; grid-template-columns: 1fr 1fr; gap:1.1rem;}
-    @media (max-width: 850px){
-      .grid2{grid-template-columns:1fr;}
-      .navlinks{display:none;}
-    }
+    @media (max-width: 850px){.grid2{grid-template-columns:1fr;}}
 
     .featureCard{
       padding: 1.1rem;
@@ -446,7 +428,6 @@
     @media (prefers-reduced-motion: reduce){
       .backdrop{animation:none;}
       .gp-badge{transition:none;}
-      .btn{transition:none;}
     }
   </style>
 
@@ -491,7 +472,7 @@
         </nav>
 
         <div class="navRight">
-          <!-- Language switcher in top bar -->
+          <!-- Language switcher -->
           <div class="lang" aria-label="Language">
             <label for="langSelect">Lang</label>
             <select id="langSelect">
@@ -501,7 +482,7 @@
             </select>
           </div>
 
-          <!-- Official-style Google Play badge button -->
+          <!-- Google Play badge in top bar -->
           <a class="gp-badge"
              href="https://play.google.com/store/apps/details?id=com.gurrulabs.miniaicrimes&utm_source=github_pages&utm_medium=organic&utm_campaign=header_badge&utm_term=google_play_badge"
              target="_blank" rel="noopener"
@@ -520,7 +501,9 @@
       <!-- HERO -->
       <div class="hero">
         <div class="heroGrid">
-          <div>
+
+          <!-- Left content -->
+          <div class="heroCopy">
             <div class="kicker"><span class="dot" aria-hidden="true"></span> A Cyberpunk True Crime Podcast You Can Play</div>
 
             <h1>
@@ -533,19 +516,20 @@
               with interactive detective gameplay. Explore cyber crime, corruption, and neon noir mysteries.
             </p>
 
+            <!-- ONLY ONE BUTTON: Google Play badge (replaces "What is it?") -->
             <div class="heroActions">
-              <!-- Official badge again (better conversion) -->
               <a class="gp-badge"
                  href="https://play.google.com/store/apps/details?id=com.gurrulabs.miniaicrimes&utm_source=github_pages&utm_medium=organic&utm_campaign=hero_badge&utm_term=google_play_badge"
                  target="_blank" rel="noopener"
                  aria-label="Get it on Google Play">
                 <img src="assets/google-play-badge.png" alt="Get it on Google Play" onerror="this.style.display='none'">
               </a>
-              <a class="btn" href="#what">What is it?</a>
             </div>
           </div>
 
-          <!-- Right card -->
+          <!-- Preview card
+               On desktop: right column.
+               On mobile: naturally BELOW the badge (because grid collapses). -->
           <aside class="heroCard" aria-label="Preview">
             <div class="heroCardTop">
               <div>
@@ -564,6 +548,7 @@
               </div>
             </div>
           </aside>
+
         </div>
       </div>
 
@@ -776,8 +761,7 @@
       });
     })();
 
-    // Language selector behavior
-    // (For now: opens your old Notion language pages. Later you can swap to real /es and /fr pages.)
+    // Language selector behavior (opens Notion language pages for now)
     document.getElementById('langSelect').addEventListener('change', (e) => {
       const lang = e.target.value;
       if (lang === 'en') {
@@ -793,3 +777,4 @@
   </script>
 </body>
 </html>
+
