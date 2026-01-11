@@ -1,18 +1,20 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Cyberpunk Detective: True Crime Podcast & Interactive RPG</title>
-  <meta name="description" content="Cyberpunk Detective is a fictional true crime podcast you can play — a neon-noir interactive detective RPG with podcast episodes and branching text stories." />
-  <meta name="theme-color" content="#0a0b10" />
+    <title>Cyberpunk Detective: True Crime Podcast & Interactive RPG</title>
+    <meta name="description" content="Cyberpunk Detective es un podcast de crímenes ficticio que puedes jugar. Un RPG narrativo de detectives en un mundo cyberpunk, con episodios de podcast y decisiones interactivas." />
+
+    <meta name="theme-color" content="#0a0b10" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Cyberpunk Detective: True Crime Podcast & Interactive RPG" />
-  <meta property="og:description" content="A cyberpunk fictional true crime podcast you can play — podcast episodes + interactive detective gameplay." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://gurrulabs-oss.github.io/cyberpunk-detective/" />
+    <meta property="og:title" content="Cyberpunk Detective: Podcast de Crímenes y RPG Interactivo" />
+    <meta property="og:description" content="Un podcast de true crime ficticio que puedes jugar. Episodios de audio y un RPG narrativo de detectives en un mundo cyberpunk." />
+
+    <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://gurrulabs-oss.github.io/cyberpunk-detective/es/" />
     <meta property="og:image" content="https://gurrulabs-oss.github.io/cyberpunk-detective/og-image.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -20,13 +22,16 @@
 
 
     <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Cyberpunk Detective: True Crime Podcast & Interactive RPG" />
-    <meta name="twitter:description" content="A cyberpunk fictional true crime podcast you can play — podcast episodes + interactive detective gameplay." />
+  <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Cyberpunk Detective: Podcast de Crímenes y RPG Interactivo" />
+    <meta name="twitter:description" content="Un podcast de crímenes ficticio con historias interactivas. Investiga, toma decisiones y resuelve casos en un mundo cyberpunk." />
     <meta name="twitter:image" content="https://gurrulabs-oss.github.io/cyberpunk-detective/og-image.png" />
     <meta name="robots" content="max-image-preview:large">
 
-  <style>
+
+
+
+    <style>
     :root{
       --bg0:#0a0b10;
       --bg1:#11131a;
@@ -149,13 +154,12 @@
       margin-top:.1rem;
     }
 
-    .navlinks{
-      display:flex;
-      align-items:center;
-      gap:1.1rem;
-      flex-wrap:wrap;
-      justify-content:flex-end;
-    }
+.navlinks{
+  display:flex;
+  align-items:center;
+  gap:1.1rem;
+  white-space: nowrap;   /* ✅ keep in one line */
+}
     .navlinks a{
       color:var(--muted);
       text-decoration:none;
@@ -164,14 +168,27 @@
       padding:.35rem .35rem;
     }
     .navlinks a:hover{color:var(--text)}
+.navlinks{
+  flex: 1 1 auto;        /* ✅ shrink if needed */
+  justify-content: center;
+}
 
-    .navRight{
-      display:flex;
-      gap:.75rem;
-      align-items:center;
-      flex-wrap:wrap;
-      justify-content:flex-end;
-    }
+.brand{
+  flex: 0 0 auto;
+}
+
+.navRight{
+  flex: 0 0 auto;
+}
+
+
+.navRight{
+  display:flex;
+  gap:.75rem;
+  align-items:center;
+  white-space: nowrap;   /* ✅ keep in one line */
+}
+
 
     /* Language switcher */
     .lang{
@@ -573,9 +590,11 @@ h1{
     </script>
 
     <!-- Favicon -->
-    <link rel="icon" href="favicon.ico" sizes="any">
-    <link rel="icon" href="favicon.png" type="image/png" sizes="512x512">
-    <link rel="apple-touch-icon" href="apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="../favicon.ico" sizes="any">
+    <link rel="icon" href="../favicon.png" type="image/png" sizes="512x512">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png" sizes="180x180">
+
+
 
 
 </head>
@@ -592,19 +611,21 @@ h1{
     <div class="container">
       <div class="nav">
         <a class="brand" href="#top" aria-label="Cyberpunk Detective home">
-          <img src="assets/icon.png" alt="Cyberpunk Detective icon" onerror="this.style.display='none'">
-          <div>
+            <img src="../assets/icon.png" alt="Cyberpunk Detective icon" onerror="this.style.display='none'">
+
+            <div>
             <div class="name">Cyberpunk Detective</div>
-            <span class="tag">True crime podcast • interactive RPG</span>
-          </div>
+                <span class="tag">Podcast de crímenes • RPG interactivo</span>
+            </div>
         </a>
 
         <nav class="navlinks" aria-label="Site navigation">
-          <a href="#what">What it is</a>
-          <a href="#stories">Stories</a>
-          <a href="#world">World</a>
-          <a href="#for">For who</a>
-          <a href="#faq">FAQ</a>
+            <a href="#what">Qué es</a>
+            <a href="#stories">Historias</a>
+            <a href="#world">El mundo</a>
+            <a href="#for">Para quién</a>
+            <a href="#faq">FAQ</a>
+
         </nav>
 
         <div class="navRight">
@@ -612,8 +633,9 @@ h1{
           <div class="lang" aria-label="Language">
             <label for="langSelect">Lang</label>
             <select id="langSelect">
-              <option value="en" selected>EN</option>
-              <option value="es">ES</option>
+                <option value="en">EN</option>
+                <option value="es" selected>ES</option>
+
               <option value="fr">FR</option>
             </select>
           </div>
@@ -642,16 +664,19 @@ h1{
 
           <!-- Left content -->
           <div class="heroCopy">
-            <div class="kicker"><span class="dot" aria-hidden="true"></span> A Cyberpunk True Crime Podcast You Can Play</div>
+            <div class="kicker"><span class="dot" aria-hidden="true"></span> Un podcast de crímenes cyberpunk que puedes jugar
+            </div>
 
             <h1>
-              Listen to <span class="glow">crime podcast episodes</span>.<br />
-              Play as a <span class="glow">detective</span> in interactive RPG stories.
+                Escucha <span class="glow">episodios de podcast de crímenes</span>.<br />
+                Juega como <span class="glow">detective</span> en historias RPG interactivas.
+
             </h1>
 
             <p class="lead">
-              <b>Cyberpunk Detective: Crime Podcast</b> is a <b>fictional true crime podcast</b> set in a dark cyberpunk future —
-              with interactive detective gameplay. Explore cyber crime, corruption, and neon noir mysteries.
+                <b>Cyberpunk Detective: Crime Podcast</b> es un <b>podcast de true crime ficticio</b> ambientado en un oscuro futuro cyberpunk,
+                con jugabilidad interactiva de detectives. Explora crímenes digitales, corrupción y misterios de estilo neon noir.
+
             </p>
               <div class="heroActions heroActions--wide">
                   <a class="gp-badge gp-badge--hero"
@@ -674,7 +699,7 @@ h1{
 
             <div class="heroShot">
               <div class="heroShotInner">
-                <img src="assets/shot-1.png" alt="Cyberpunk Detective screenshot" onerror="this.remove();">
+                <img src="../assets/shot-1.png" alt="Cyberpunk Detective screenshot" onerror="this.remove();">
               </div>
 
             </div>
@@ -687,36 +712,43 @@ h1{
       <section id="what">
         <div class="sectionCard">
           <h2>
-   <span class="glow">What Is Cyberpunk Detective: Crime Podcast?</span>
+   <span class="glow">¿Qué es Cyberpunk Detective: Crime Podcast?</span>
           </h2>
 
           <p>
-            Cyberpunk Detective: Crime Podcast combines a <b>true crime podcast</b> with an
-              <span class="glow"><b>interactive cyberpunk detective game</b>.</span>
+              Cyberpunk Detective: Crime Podcast combina un <b>podcast de true crime</b> con un
+              <b>juego interactivo de detectives cyberpunk</b>.
+
           </p>
 
-          <p>Each investigation can be experienced in two ways:</p>
+          <p>Cada investigación se puede realizar de dos formas:</p>
 
           <div class="grid2" style="margin-top: 1rem;">
             <div class="featureCard">
-              <div class="titleRow"><span class="icon" aria-hidden="true">🎙</span> Fictional True Crime Podcast</div>
+              <div class="titleRow"><span class="icon" aria-hidden="true">🎙</span> Podcast de True Crime Ficticio
+              </div>
               <ul>
-                <li>High-quality
-                    <span class="glow"><b>audio drama podcast</b> </span>
-                </li>
-                <li>Cyber crime cases and digital conspiracies</li>
-                <li>Lost recordings, hacked files, and corrupted evidence</li>
-                <li>Designed for fans of <b>true crime podcasts</b> and mystery storytelling</li>
+                  <li>Podcast narrativo de
+                      <span class="glow"><b>audio de alta calidad</b></span>
+                  </li>
+
+                  <li>Podcast narrativo de <b>alta calidad</b></li>
+                  <li>Casos de cibercrimen y conspiraciones digitales</li>
+                  <li>Grabaciones perdidas, archivos hackeados y pruebas corruptas</li>
+                  <li>Diseñado para fans del <b>true crime</b> y las historias de misterio</li>
+
               </ul>
             </div>
 
             <div class="featureCard">
-              <div class="titleRow"><span class="icon" aria-hidden="true">📖</span> Interactive Detective Game (Text RPG)</div>
+              <div class="titleRow"><span class="icon" aria-hidden="true">📖</span> IJuego de Detectives Interactivo (RPG de texto)
+              </div>
               <ul>
-                <li>Choice-driven <b>interactive fiction</b></li>
-                <li>Branching storylines with multiple endings</li>
-                <li>Text-based RPG gameplay focused on investigation</li>
-                <li>Inspired by <b>Twine</b> and classic text adventures</li>
+                  <li>Ficción interactiva basada en decisiones</li>
+                  <li>Historias ramificadas con múltiples finales</li>
+                  <li>Jugabilidad RPG centrada en la investigación</li>
+                  <li>Inspirado en <b>Twine</b> y aventuras de texto clásicas</li>
+
               </ul>
             </div>
           </div>
@@ -724,7 +756,8 @@ h1{
           <div class="divider" role="separator" aria-label="divider"></div>
 
           <p style="color: var(--muted); font-weight:700;">
-            Inspired by noir detective fiction, cyberpunk classics, and modern crime podcasts.
+              Inspirado en la ficción noir de detectives, los clásicos del cyberpunk y los podcasts modernos de crímenes.
+
           </p>
 
             <!--
@@ -741,19 +774,19 @@ h1{
             <div class="shots" aria-label="Screenshots gallery">
                 <div class="shot">
                     <a class="shotLink" href="assets/shot-2.png">
-                    <img src="assets/shot-2.png" alt="Podcast mode screenshot" onerror="this.remove();">
+                    <img src="../assets/shot-2.png" alt="Podcast mode screenshot" onerror="this.remove();">
                     </a>
 
                 </div>
                 <div class="shot">
                     <a class="shotLink" href="assets/shot-3.png">
-                    <img src="assets/shot-3.png" alt="Interactive mode screenshot" onerror="this.remove();">
+                    <img src="../assets/shot-3.png" alt="Interactive mode screenshot" onerror="this.remove();">
                     </a>
 
                 </div>
                 <div class="shot">
                     <a class="shotLink" href="assets/shot-4.png">
-                    <img src="assets/shot-4.png" alt="Investigation screenshot" onerror="this.remove();">
+                    <img src="../assets/shot-4.png" alt="Investigation screenshot" onerror="this.remove();">
                     </a>
 
                 </div>
@@ -771,24 +804,26 @@ h1{
         <div class="sectionCard">
           <h2>
                <span class="glow">
-              Cyberpunk Detective Stories — Audio or Interactive
+              Historias de Cyberpunk Detective — Audio o Interactivas
+
                    </span>
           </h2>
 
-          <h3>🎙 Fictional True Crime Podcast</h3>
+          <h3>🎙 Podcast de True Crime fiction</h3>
           <ul>
-            <li>🎧 Listen to cinematic <b>crime podcast episodes</b></li>
-            <li>🌃 Explore cyber crime, corruption, and neon noir mysteries</li>
+              <li>🎧 Escucha episodios cinematográficos de <b>podcast de crímenes</b></li>
+              <li>🌃 Explora cibercrimen, corrupción y misterios neon noir</li>
+
           </ul>
             <div class="shots shots--stories" aria-label="Screenshots gallery">
                 <div class="shot">
                     <a class="shotLink" href="assets/shot-2.png">
-                        <img src="assets/shot-2.png" alt="Podcast mode screenshot" onerror="this.remove();">
+                        <img src="../assets/shot-2.png" alt="Podcast mode screenshot" onerror="this.remove();">
                     </a>
                 </div>
                 <div class="shot">
                     <a class="shotLink" href="assets/shot-3.png">
-                        <img src="assets/shot-3.png" alt="Interactive mode screenshot" onerror="this.remove();">
+                        <img src="../assets/shot-3.png" alt="Interactive mode screenshot" onerror="this.remove();">
                     </a>
                 </div>
 
@@ -797,11 +832,11 @@ h1{
 
           <div class="divider" role="separator" aria-label="divider"></div>
 
-          <h3>📖 Interactive Detective Game (Text RPG)</h3>
-          <ul>
-            <li>🕵️ Play as a detective in <b>interactive text RPG stories</b></li>
-            <li>Make choices, analyze clues, and solve the case yourself</li>
-          </ul>
+            <h3>📖 Juego de detectives interactivo (RPG de texto)</h3>
+            <ul>
+                <li>🕵️ Juega como detective en <b>historias RPG interactivas de texto</b></li>
+                <li>Toma decisiones, analiza pistas y resuelve el caso por tu cuenta</li>
+            </ul>
 
         </div>
       </section>
@@ -809,20 +844,18 @@ h1{
       <!-- WORLD -->
       <section id="world">
         <div class="sectionCard">
-          <h2>
-                             <span class="glow">
-                            A Dark Cyberpunk Noir World
-                   </span>
+            <h2><span class="glow">Un mundo noir cyberpunk oscuro</span></h2>
+            <p>Adéntrate en una ciudad del futuro marcada por:</p>
+            <ul>
+                <li>Corrupción corporativa</li>
+                <li>Vigilancia y cibercrimen</li>
+                <li>Mercados negros digitales</li>
+                <li>Calles iluminadas por neón y decadencia moral</li>
+            </ul>
+            <p style="color: var(--muted); font-weight:700;">
+                Cada caso revela una nueva capa del submundo de la ciudad.
+            </p>
 
-          </h2>
-          <p>Step into a future city shaped by:</p>
-          <ul>
-            <li>Corporate corruption</li>
-            <li>Surveillance and cyber crime</li>
-            <li>Digital black markets</li>
-            <li>Neon-lit streets and moral decay</li>
-          </ul>
-          <p style="color: var(--muted); font-weight:700;">Every case reveals a new layer of the city’s underworld.</p>
         </div>
       </section>
 
@@ -831,33 +864,29 @@ h1{
         <div class="sectionCard">
           <div class="grid2">
             <div>
-              <h2>
-                  🔍<span class="glow"> Who Is This Podcast & Game For?</span>
-                  </h2>
-              <p>Cyberpunk Detective: Crime Podcast is for fans of:</p>
-              <ul>
-                <li><b>True crime podcasts</b></li>
-                <li><b>Cyberpunk stories</b></li>
-                <li><b>Detective games</b></li>
-                <li><b>Interactive fiction</b> and <b>text RPGs</b></li>
-                <li>Story-driven experiences without ads or grinding</li>
-              </ul>
-            </div>
-
-            <div>
-              <h2>
-                  🚀<span class="glow"> Why Cyberpunk Detective Is Different</span>
-                  </h2>
-              <ul>
-                <li>Podcast <b>and</b> game in one app</li>
-                <li>Story-first design for mature audiences</li>
-                <li>No filler, no pay-to-win mechanics</li>
-                <li>Offline-friendly episodes and stories</li>
-                <li>Original cyberpunk universe</li>
-              </ul>
-
+                <h2>🔍 <span class="glow">¿Para quién es este podcast y juego?</span></h2>
+                <p>Cyberpunk Detective: Crime Podcast es para fans de:</p>
+                <ul>
+                    <li><b>Podcasts de true crime</b></li>
+                    <li><b>Historias cyberpunk</b></li>
+                    <li><b>Juegos de detectives</b></li>
+                    <li><b>Ficción interactiva</b> y <b>RPG narrativos</b></li>
+                    <li>Experiencias sin anuncios ni relleno</li>
+                </ul>
 
             </div>
+              <div>
+                  <h2>
+                      🚀<span class="glow"> Por qué Cyberpunk Detective es diferente</span>
+                  </h2>
+                  <ul>
+                      <li>Podcast <b>y</b> juego en una sola app</li>
+                      <li>Diseño centrado en la historia para un público adulto</li>
+                      <li>Sin relleno ni mecánicas pay-to-win</li>
+                      <li>Episodios e historias disponibles sin conexión</li>
+                      <li>Universo cyberpunk original</li>
+                  </ul>
+              </div>
           </div>
         </div>
       </section>
@@ -870,25 +899,41 @@ h1{
               </h2>
 
             <details open>
-            <summary>
-                <span class="glow"> Is Cyberpunk Detective a real true crime podcast?</span></summary>
-            <p>It’s a <b>fictional true crime podcast</b>, inspired by real investigative formats and set in a cyberpunk world.</p>
-          </details>
-
+                <summary>
+                    <span class="glow">¿Cyberpunk Detective es un podcast de true crime real?</span>
+                </summary>
+                <p>
+                    Es un <b>podcast de true crime ficticio</b>, inspirado en formatos reales de investigación
+                    y ambientado en un mundo cyberpunk.
+                </p>
+            </details>
             <details open>
-            <summary><span class="glow">Can I play instead of just listening?</span></summary>
-            <p>Yes. You can switch between <b>podcast mode</b> and <b>interactive detective gameplay</b> at any time.</p>
-          </details>
-
+                <summary>
+                    <span class="glow">¿Puedo jugar en lugar de solo escuchar?</span>
+                </summary>
+                <p>
+                    Sí. Puedes alternar entre el <b>modo podcast</b> y la
+                    <b>jugabilidad interactiva de detectives</b> en cualquier momento.
+                </p>
+            </details>
             <details open>
-            <summary><span class="glow">Is Cyberpunk Detective a game or a podcast?</span></summary>
-            <p>It’s both — a <b>crime podcast</b> and an <b>interactive text-based detective RPG</b>.</p>
-          </details>
-
+                <summary>
+                    <span class="glow">¿Cyberpunk Detective es un juego o un podcast?</span>
+                </summary>
+                <p>
+                    Es ambas cosas: un <b>podcast de crímenes</b> y un
+                    <b>RPG interactivo de detectives basado en texto</b>.
+                </p>
+            </details>
             <details open>
-            <summary><span class="glow">Does it work offline?</span></summary>
-            <p>Yes. Stories and episodes can be enjoyed offline once downloaded.</p>
-          </details>
+                <summary>
+                    <span class="glow">¿Funciona sin conexión a Internet?</span>
+                </summary>
+                <p>
+                    Sí. Las historias y los episodios se pueden disfrutar sin conexión
+                    una vez descargados.
+                </p>
+            </details>
         </div>
       </section>
 
@@ -897,12 +942,12 @@ h1{
         <div class="footerRow">
           <div>
             <div style="font-weight:950; letter-spacing:.06em; text-transform:uppercase;">Cyberpunk Detective</div>
-            <div style="margin-top:.35rem;">© <span id="year"></span> · All rights reserved</div>
+            <div style="margin-top:.35rem;">© <span id="year"></span> · Todos los derechos reservados</div>
           </div>
 
           <div class="footerLinks" aria-label="Footer links">
             <a href="https://play.google.com/store/apps/details?id=com.gurrulabs.miniaicrimes" target="_blank" rel="noopener">Google Play</a>
-            <a href="#top">Back to top</a>
+            <a href="#top">Volver arriba</a>
           </div>
         </div>
       </footer>
@@ -938,7 +983,7 @@ h1{
     // Persist attribution for subsequent events
     mixpanel.register({
       referrer: ref || "direct",
-      page_lang: "en",
+      page_lang: "es",
       referrer_is_google: isGoogle,
       landing_url: window.location.href,
       landing_path: window.location.pathname,
@@ -981,8 +1026,7 @@ h1{
       });
     })();
 
-    // Language selector behavior (opens Notion language pages for now)
-    document.getElementById('langSelect').addEventListener('change', (e) => {
+document.getElementById('langSelect').addEventListener('change', (e) => {
   const lang = e.target.value;
 
   if (lang === 'en') {
